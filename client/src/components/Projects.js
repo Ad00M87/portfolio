@@ -10,36 +10,7 @@ import {
 } from 'semantic-ui-react';
 import ListProjects from './ListProjects';
 import CardProjects from './CardProjects';
-
-const projects = [
-  {
-    name: "CanDuu",
-    bulletPoints: [
-      "One",
-      "Two",
-      "Three"
-    ],
-    media: "image or video",
-  },
-  {
-    name: "Whistle Recruiting",
-    bulletPoints: [
-      "One",
-      "Two",
-      "Three"
-    ],
-    media: "image or video",
-  },
-  {
-    name: "DevPoint Studios Website",
-    bulletPoints: [
-      "One",
-      "Two",
-      "Three"
-    ],
-    media: "image or video",
-  },
-]
+import { projects } from './ProjectInfo';
 
 class Projects extends React.Component {
   state = {
