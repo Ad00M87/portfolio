@@ -4,6 +4,9 @@ import {
   Grid,
   Divider,
   Container,
+  Segment,
+  Button,
+  Icon,
 } from 'semantic-ui-react';
 
 const projects = [
@@ -42,6 +45,12 @@ class Projects extends React.Component {
     return(
       <Container>
         <Divider hidden />
+        <Segment clearing basic>
+          <Button.Group floated="right">
+            <Button><Icon name="block layout"  size="big" /></Button>
+            <Button><Icon name="list layout" size="big" /></Button>
+          </Button.Group>
+        </Segment>
         <Grid columns={2}>
           <Grid.Column width={6}>
             <Grid.Row>
