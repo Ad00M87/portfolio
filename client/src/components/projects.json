@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "name": "CanDuu",
+      "bulletPoints": [
+        "One",
+        "Two",
+        "Three"
+      ],
+      "media": "image or video",
+    },
+    {
+      "name": "Whistle Recruiting",
+      "bulletPoints": [
+        "One",
+        "Two",
+        "Three"
+      ],
+      "media": "image or video",
+    },
+    {
+      "name": "DevPoint Studios Website",
+      "bulletPoints": [
+        "One",
+        "Two",
+        "Three"
+      ],
+      "media": "image or video",
+    },
+  ]
+}
