@@ -5,17 +5,17 @@ import {
   Image,
 } from 'semantic-ui-react';
 
-const CardProjects = ({ projects }) => (
+const CardProjects = ({ projects, changeview }) => (
   <Card.Group>
     { projects.map( (p, i) => {
       return(
         <Card key={i}>
           <Card.Content>
             <Image
-              src='https://upload.wikimedia.org/wikipedia/commons/f/fa/IPhone_5.png'
-              size="small"
+              src={p.media[0].image}
+              size={p.media[0].type === "web" ? "large" : "small"}
             />
-            <Card.Header style={{padding: 5}}>
+            <Card.Header style={{paddingTop: '15px'}}>
               {p.name}
             </Card.Header>
             { p.bulletPoints.map( (b,i) => {
@@ -29,7 +29,7 @@ const CardProjects = ({ projects }) => (
           <Card.Content extra>
             { p.types.map( t => {
               return(
-                <Button>View {t}</Button>
+                <Button onClick={() => changeview(p.id)}>View {t}</Button>
               )
             })}
           </Card.Content>

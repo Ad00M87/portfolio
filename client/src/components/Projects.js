@@ -12,6 +12,9 @@ import {
 import ListProjects from './ListProjects';
 import CardProjects from './CardProjects';
 import { projects } from './ProjectInfo';
+import { setCurrentProject } from '../actions/project';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Projects extends React.Component {
   state = {
@@ -19,6 +22,12 @@ class Projects extends React.Component {
     projects: projects,
     year: '',
     type: '',
+  }
+
+  showProject = (id) => {
+    const { dispatch, history } = this.props;
+    dispatch(setCurrentProject(id));
+    history.push(`/projects/${id}`);
   }
 
   filterByYear = (year) => {
@@ -62,7 +71,7 @@ class Projects extends React.Component {
           </Button.Group>
         </Segment>
         <Grid columns={2}>
-          <Grid.Column width={3} style={{ borderRight: '2px solid black'}}>
+          <Grid.Column width={3}>
             <Grid.Row>
               <Button onClick={this.clearFilters}>Clear Filters</Button>
               <Segment>
@@ -113,9 +122,9 @@ class Projects extends React.Component {
           </Grid.Column>
           <Grid.Column width={13}>
             { this.state.listView ?
-              <ListProjects projects={projects} />
+              <ListProjects projects={projects} changeview={this.showProject}/>
               :
-              <CardProjects projects={projects} />
+              <CardProjects projects={projects} changeview={this.showProject}/>
             }
           </Grid.Column>
         </Grid>
@@ -124,4 +133,4 @@ class Projects extends React.Component {
   }
 }
 
-export default Projects;
+export default withRouter(connect()(Projects));

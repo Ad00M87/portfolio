@@ -1,11 +1,15 @@
 import React from 'react';
-import { Grid, Header, Button } from 'semantic-ui-react';
+import { Grid, Header, Button, Image } from 'semantic-ui-react';
 
-const ListProjects = ({ projects }) => (
+const ListProjects = ({ projects, changeview }) => (
   <Grid>
     { projects.map( (p, i) => {
       return(
-        <Grid.Row key={i} columns={2} style={{marginTop: '10px', marginBottom: '10px'}}>
+        <Grid.Row
+          key={i}
+          columns={2}
+          style={{marginTop: '10px', marginBottom: '10px', boxShadow: '4px 4px 4px 4px grey', marginLeft: '3px'}}
+        >
           <Grid.Column width={6}>
             <Header textAlign="center" as="h1">{p.name}</Header>
             { p.bulletPoints.map( (b,i) => {
@@ -17,12 +21,12 @@ const ListProjects = ({ projects }) => (
             })}
             { p.types.map( t => {
               return(
-                <Button>View {t}</Button>
+                <Button onClick={() => changeview(p.id)}>View {t}</Button>
               )
             })}
           </Grid.Column>
           <Grid.Column width={10}>
-            <div style={{height: 200, width: 400, backgroundColor: 'rgba(18, 189, 227, 0.51)'}}></div>
+            <Image src={p.media[0].image} size={p.media[0].type === "web" ? "large" : "medium"} />
           </Grid.Column>
         </Grid.Row>
       )
