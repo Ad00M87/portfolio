@@ -7,7 +7,8 @@ export const projects = [
       "Responsible for building a React Native mobile application."
     ],
     media: "image or video",
-    types: ["mobile", "web"]
+    types: ["Mobile", "Web"],
+    year: "2018"
   },
   {
     name: "Whistle Recruiting",
@@ -18,7 +19,8 @@ export const projects = [
       "Managed and mentored two developers on automated/manual testing principles"
     ],
     media: "image or video",
-    types: ["mobile", "web"]
+    types: ["Mobile", "Web"],
+    year: "2017"
   },
   {
     name: "DevPoint Studios Website",
@@ -27,7 +29,8 @@ export const projects = [
       "Developing new React components to allow for easy management and modifications to the static website"
     ],
     media: "image or video",
-    types: ["web"]
+    types: ["Web"],
+    year: "2018"
   },
   {
     name: "JessieKDesign",
@@ -36,6 +39,28 @@ export const projects = [
       "Brought revenue to the website by implementing affiliate advertising."
     ],
     media: "image or video",
-    types: ["web"]
+    types: ["Web"],
+    year: "2017"
+  },
+  {
+    name: "Dr. Frank",
+    bulletPoints: [
+      "Fun personal, Halloween project",
+      "Built with React, using some vanilla Javascript",
+      "First time creating custom Illustrator images"
+    ],
+    media: "image or video",
+    types: ["Web"],
+    year: "2017"
+  },
+  {
+    name: "devpointlabs/vocab",
+    bulletPoints: [
+      "A web application to help coding learners to review unfamiliar terms.",
+      "Worked on building better UI/UX"
+    ],
+    media: "image or video",
+    types: ["Web"],
+    year: "2017"
   }
 ]
