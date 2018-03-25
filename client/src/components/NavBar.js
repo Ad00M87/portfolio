@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
+import Logo from '../images/adamlogo.png';
 
 class NavBar extends Component {
   // rightNavs = () => {
@@ -39,16 +40,20 @@ class NavBar extends Component {
           fixed='top'
           style={{
             backgroundColor: '#FFF',
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item>
+              <Image src={Logo} size="medium"/>
+            </Menu.Item>
           </Link>
           <Link to='/projects'>
-            <Menu.Item name='projects' />
+            <Menu.Item name='projects' style={{fontSize: '30px'}}/>
           </Link>
           <Link to='/skills'>
-            <Menu.Item name='skills' />
+            <Menu.Item name='skills' style={{fontSize: '30px'}} />
           </Link>
         </Menu>
       </div>

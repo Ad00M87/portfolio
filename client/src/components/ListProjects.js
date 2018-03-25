@@ -19,14 +19,12 @@ const ListProjects = ({ projects, changeview }) => (
                 </Header>
               )
             })}
-            { p.types.map( t => {
-              return(
-                <Button onClick={() => changeview(p.id)}>View {t}</Button>
-              )
-            })}
+            <Button onClick={() => changeview(p.id)}>View Project</Button>
           </Grid.Column>
           <Grid.Column width={10}>
-            <Image src={p.media[0].image} size={p.media[0].type === "web" ? "large" : "medium"} />
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1}}>
+              <Image src={p.media[0].image} size="large"/>
+            </div>
           </Grid.Column>
         </Grid.Row>
       )

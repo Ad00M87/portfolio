@@ -6,14 +6,14 @@ import {
 } from 'semantic-ui-react';
 
 const CardProjects = ({ projects, changeview }) => (
-  <Card.Group>
+  <Card.Group itemsPerRow={2}>
     { projects.map( (p, i) => {
       return(
         <Card key={i}>
           <Card.Content>
             <Image
               src={p.media[0].image}
-              size={p.media[0].type === "web" ? "large" : "small"}
+              size="large"
             />
             <Card.Header style={{paddingTop: '15px'}}>
               {p.name}
@@ -27,11 +27,7 @@ const CardProjects = ({ projects, changeview }) => (
             })}
           </Card.Content>
           <Card.Content extra>
-            { p.types.map( t => {
-              return(
-                <Button onClick={() => changeview(p.id)}>View {t}</Button>
-              )
-            })}
+            <Button onClick={() => changeview(p.id)}>View Project</Button>
           </Card.Content>
         </Card>
       )

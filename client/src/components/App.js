@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div>
         <NavBar />
-        <Divider hidden style={{marginTop: '50px'}} />
+        <Divider hidden style={{marginTop: '100px'}} />
         <Flash />
         <Switch>
           <Route exact path='/' component={Home} />

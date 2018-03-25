@@ -57,16 +57,18 @@ class Projects extends React.Component {
   render() {
     const { projects } = this.state;
     return(
-      <Container>
+      <div style={{marginLeft: "150px", marginRight: "150px"}}>
         <Divider hidden />
         <Segment clearing basic textAlign="center">
           <Header as="h1">Projects</Header>
           <Button.Group floated="right">
-            <Button onClick={() => this.setState({ listView: false })}>
+            <Button icon labelPosition="right" onClick={() => this.setState({ listView: false })}>
               <Icon name="block layout"  size="big" />
+              Card View
             </Button>
-            <Button onClick={() => this.setState({ listView: true })}>
+            <Button icon labelPosition="right" onClick={() => this.setState({ listView: true })}>
               <Icon name="list layout" size="big" />
+              List View
             </Button>
           </Button.Group>
         </Segment>
@@ -128,7 +130,7 @@ class Projects extends React.Component {
             }
           </Grid.Column>
         </Grid>
-      </Container>
+      </div>
     )
   }
 }

@@ -4,8 +4,12 @@ import { connect } from 'react-redux';
 class Project extends React.Component {
 
   render() {
+    let { project: media } = this.props;
+    let movie = media[1];
     return(
-      <div>Hello</div>
+      <div>
+        {this.props.project.name}
+      </div>
     )
   }
 }

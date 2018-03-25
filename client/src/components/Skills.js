@@ -8,7 +8,7 @@ class Skills extends React.Component {
   render() {
     return(
       <Container>
-        <Header textAlign="center" style={{fontSize: '50px'}}>Languages and Skills</Header>
+        <Header textAlign="center" as="h1">Languages and Skills</Header>
         <Grid>
           <Grid.Row columns={4}>
             { languages.map( (l, i) => {
