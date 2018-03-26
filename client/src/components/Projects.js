@@ -17,7 +17,7 @@ import { connect } from 'react-redux';
 
 class Projects extends React.Component {
   state = {
-    listView: false,
+    cardView: false,
     projects: projects,
     year: '',
     type: '',
@@ -61,13 +61,13 @@ class Projects extends React.Component {
         <Segment clearing basic textAlign="center">
           <Header as="h1">Projects</Header>
           <Button.Group floated="right">
-            <Button icon labelPosition="right" onClick={() => this.setState({ listView: false })}>
-              <Icon name="block layout"  size="big" />
-              Card View
-            </Button>
-            <Button icon labelPosition="right" onClick={() => this.setState({ listView: true })}>
-              <Icon name="list layout" size="big" />
+            <Button icon labelPosition="right" onClick={() => this.setState({ cardView: false })}>
+              <Icon name="list layout"  size="big" />
               List View
+            </Button>
+            <Button icon labelPosition="right" onClick={() => this.setState({ cardView: true })}>
+              <Icon name="block layout" size="big" />
+              Card View
             </Button>
           </Button.Group>
         </Segment>
@@ -122,10 +122,10 @@ class Projects extends React.Component {
             </Grid.Row>
           </Grid.Column>
           <Grid.Column width={13}>
-            { this.state.listView ?
-              <ListProjects projects={projects} changeview={this.showProject}/>
-              :
+            { this.state.cardView ?
               <CardProjects projects={projects} changeview={this.showProject}/>
+              :
+              <ListProjects projects={projects} changeview={this.showProject}/>
             }
           </Grid.Column>
         </Grid>

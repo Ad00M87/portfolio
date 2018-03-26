@@ -1,20 +1,14 @@
 import CNDU from '../images/canduu.png';
-import CNDUM from '../images/CanDuu.mov';
 import CDN2 from '../images/canduu2.png';
 import CDN3 from '../images/canduu3.png';
-import DPSM from '../images/DPS.mov';
 import DPS1 from '../images/dps1.png';
 import DPS2 from '../images/dps2.png';
-import DFRM from '../images/DrFrank.mov';
 import DRF1 from '../images/drfr1.png';
 import DRF2 from '../images/drfr2.png';
 import DRF3 from '../images/drfr3.png';
-import JKDM from '../images/JessieKDesign.mov';
 import JKD1 from '../images/jkd1.png';
-import VOCM from '../images/Vocab.mov';
 import VOC1 from '../images/vocab1.png';
 import WHN from '../images/whistlenat.png';
-import WHNM from '../images/WhistleNative.mov';
 import WHN2 from '../images/whn2.png';
 import WHN3 from '../images/whn3.png';
 import WHN4 from '../images/whn4.png';
@@ -31,7 +25,7 @@ export const projects = [
       "Responsible for building a React Native mobile application."
     ],
     media: [ { image: CNDU, type: "mobile"} ],
-    movie: CNDUM,
+    movie: 0,
     types: ["Mobile", "Web"],
     year: "2018"
   },
@@ -45,7 +39,7 @@ export const projects = [
       "Managed and mentored two developers on automated/manual testing principles"
     ],
     media: [ { image: WHN, type: "mobile"} ],
-    movie: WHNM,
+    movie: 1,
     types: ["Mobile", "Web"],
     year: "2017"
   },
@@ -57,7 +51,7 @@ export const projects = [
       "Developing new React components to allow for easy management and modifications to the static website"
     ],
     media: [ { image: DPS1, type: "web"} ],
-    movie: DPSM,
+    movie: 2,
     types: ["Web"],
     year: "2018"
   },
@@ -69,7 +63,7 @@ export const projects = [
       "Brought revenue to the website by implementing affiliate advertising."
     ],
     media: [ { image: JKD1, type: "web"} ],
-    movie: JKDM,
+    movie: 3,
     types: ["Web"],
     year: "2017"
   },
@@ -82,7 +76,7 @@ export const projects = [
       "First time creating custom Illustrator images"
     ],
     media: [ { image: DRF1, type: "web"} ],
-    movie: DFRM,
+    movie: 4,
     types: ["Web"],
     year: "2017"
   },
@@ -94,7 +88,7 @@ export const projects = [
       "Worked on building better UI/UX"
     ],
     media: [ { image: VOC1, type: "web"} ],
-    movie: VOCM,
+    movie: 5,
     types: ["Web"],
     year: "2017"
   }

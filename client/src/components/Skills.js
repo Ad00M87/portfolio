@@ -1,13 +1,14 @@
 import React from 'react';
 import Skill from './Skill';
 import { languages } from './SkillsInfo';
-import { Container, Grid, Header } from 'semantic-ui-react';
+import { Container, Grid, Header, Divider } from 'semantic-ui-react';
 
 class Skills extends React.Component {
 
   render() {
     return(
       <Container>
+        <Divider hidden />
         <Header textAlign="center" as="h1">Languages and Skills</Header>
         <Grid>
           <Grid.Row columns={4}>

@@ -9,7 +9,7 @@ const CardProjects = ({ projects, changeview }) => (
   <Card.Group itemsPerRow={2}>
     { projects.map( (p, i) => {
       return(
-        <Card key={i}>
+        <Card key={i} style={{boxShadow: '4px 4px 4px 4px grey'}}>
           <Card.Content>
             <Image
               src={p.media[0].image}
