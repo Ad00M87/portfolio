@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Menu, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { handleLogout } from '../actions/auth';
+// import { handleLogout } from '../actions/auth';
 import Logo from '../images/adamlogo.png';
 
 class NavBar extends Component {

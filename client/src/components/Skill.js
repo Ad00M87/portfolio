@@ -17,7 +17,7 @@ class Skill extends React.Component {
         textAlign="center"
       >
         <Image src={lang.image} size={this.state.size} />
-        { size == "medium" && <Header as="h1">{lang.name}</Header>}
+        { size === "medium" && <Header as="h1">{lang.name}</Header>}
       </Segment>
     )
   }

@@ -5,7 +5,7 @@ class Project extends React.Component {
 
   render() {
     let { project: media } = this.props;
-    let movie = media[1];
+    // let movie = media[1];
     return(
       <div>
         {this.props.project.name}

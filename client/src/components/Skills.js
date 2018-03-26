@@ -1,7 +1,7 @@
 import React from 'react';
 import Skill from './Skill';
 import { languages } from './SkillsInfo';
-import { Container, Grid, Image, Segment, Header } from 'semantic-ui-react';
+import { Container, Grid, Header } from 'semantic-ui-react';
 
 class Skills extends React.Component {
 

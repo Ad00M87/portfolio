@@ -3,7 +3,6 @@ import {
   Header,
   Grid,
   Divider,
-  Container,
   Segment,
   Button,
   Icon,
@@ -31,18 +30,18 @@ class Projects extends React.Component {
   }
 
   filterByYear = (year) => {
-    if (year != this.state.year && this.state.year != '' && this.state.type != '') {
-      let byYear = projects.filter( p => (p.year == year && p.types.includes(this.state.type)))
+    if (year !== this.state.year && this.state.year !== '' && this.state.type !== '') {
+      let byYear = projects.filter( p => (p.year === year && p.types.includes(this.state.type)))
       this.setState({ projects: byYear, year: year })
     } else {
-      let byYear = this.state.projects.filter( p => p.year == year )
+      let byYear = this.state.projects.filter( p => p.year === year )
       this.setState({ projects: byYear, year: year })
     }
   }
 
   filterByType = (type) => {
-    if (type != this.state.type && this.state.type != '' && this.state.year != '') {
-      let byType = projects.filter( p => (p.year == this.state.year && p.types.includes(type)))
+    if (type !== this.state.type && this.state.type !== '' && this.state.year !== '') {
+      let byType = projects.filter( p => (p.year === this.state.year && p.types.includes(type)))
       this.setState({ projects: byType, type: type })
     } else {
       let byType = this.state.projects.filter( p => p.types.includes(type) )
@@ -83,7 +82,7 @@ class Projects extends React.Component {
                     radio
                     label='2017'
                     value='2017'
-                    checked={this.state.year == "2017"}
+                    checked={this.state.year === "2017"}
                     onChange={() => this.filterByYear("2017")}
                   />
                 </div>
@@ -92,7 +91,7 @@ class Projects extends React.Component {
                     radio
                     label='2018'
                     value='2018'
-                    checked={this.state.year == "2018"}
+                    checked={this.state.year === "2018"}
                     onChange={() => this.filterByYear("2018")}
                   />
                 </div>
@@ -106,7 +105,7 @@ class Projects extends React.Component {
                     radio
                     label='Web'
                     value='Web'
-                    checked={this.state.type == "Web"}
+                    checked={this.state.type === "Web"}
                     onChange={() => this.filterByType("Web")}
                   />
                 </div>
@@ -115,7 +114,7 @@ class Projects extends React.Component {
                     radio
                     label='Mobile'
                     value='Mobile'
-                    checked={this.state.type == "Mobile"}
+                    checked={this.state.type === "Mobile"}
                     onChange={() => this.filterByType("Mobile")}
                   />
                 </div>
