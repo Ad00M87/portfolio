@@ -1,28 +1,23 @@
 import CNDU from '../images/canduu.png';
-import CDN2 from '../images/canduu2.png';
-import CDN3 from '../images/canduu3.png';
 import DPS1 from '../images/dps1.png';
-import DPS2 from '../images/dps2.png';
 import DRF1 from '../images/drfr1.png';
-import DRF2 from '../images/drfr2.png';
-import DRF3 from '../images/drfr3.png';
 import JKD1 from '../images/jkd1.png';
 import VOC1 from '../images/vocab1.png';
 import WHN from '../images/whistlenat.png';
-import WHN2 from '../images/whn2.png';
-import WHN3 from '../images/whn3.png';
-import WHN4 from '../images/whn4.png';
-import WHW1 from '../images/whw1.png';
-import WHW2 from '../images/whw2.png';
 
 export const projects = [
   {
     id: 1,
     name: "CanDuu",
+    description: {
+      narritive: "CanDuu is a software based on connecting providers and customers. The application will be available on both the web and mobile devices",
+      languages: "Ruby on Rails backend with a React/ReactNative frontend"
+    },
     bulletPoints: [
       "Integration of Redux to build several front-end features including work-order requests, work provider searches, and a Q and A message board for work-orders.",
       "Working as a team lead over 4 intern developers for build of web portion of application.",
-      "Responsible for building a React Native mobile application."
+      "Responsible for building a React Native mobile application.",
+      "Web portion of project is still under construction."
     ],
     media: [ { image: CNDU, type: "mobile"} ],
     movie: 0,
@@ -32,6 +27,10 @@ export const projects = [
   {
     id: 2,
     name: "Whistle Recruiting",
+    description: {
+      narritive: "Whistle Recruiting is a software focused on collegiate sport recruiting. It helps to make recruiting processes easier for both college coaches and administrators. The is available on both the web and mobile devices",
+      languages: "Ruby on Rails backend with a React/ReactNative frontend"
+    },
     bulletPoints: [
       "Refactoring of code from Rails 4/Angular to Rails 5/React for web application.",
       "Improved functionality of coach and compliance report generator by adding administrative ability to customize and export database queries via SQL and active record.",
@@ -40,12 +39,17 @@ export const projects = [
     ],
     media: [ { image: WHN, type: "mobile"} ],
     movie: 1,
+    video: 6,
     types: ["Mobile", "Web"],
     year: "2017"
   },
   {
     id: 3,
     name: "DevPoint Studios Website",
+    description: {
+      narritive: "DevPoint Studios is a web and software development firm working with local companies to build applications.",
+      languages: "A static website built with a React frontend"
+    },
     bulletPoints: [
       "Redeveloping existing code base to be more responsive with a large focus on mobile devices.",
       "Developing new React components to allow for easy management and modifications to the static website"
@@ -58,8 +62,13 @@ export const projects = [
   {
     id: 4,
     name: "JessieKDesign",
+    description: {
+      narritive: "JessieKDesign is a website that specializes in DIY projects and free printables.",
+      languages: "WordPress website"
+    },
     bulletPoints: [
-      "Updating CSS and HTML as needed for a WordPress website.",
+      "Updating CSS and HTML as needed.",
+      "Implemented Email Opt-ins",
       "Brought revenue to the website by implementing affiliate advertising."
     ],
     media: [ { image: JKD1, type: "web"} ],
@@ -70,6 +79,10 @@ export const projects = [
   {
     id: 5,
     name: "Dr. Frank",
+    description: {
+      narritive: "A personal project that was created for fun.",
+      languages: "A static website built with a React frontend"
+    },
     bulletPoints: [
       "Fun personal, Halloween project",
       "Built with React, using some vanilla Javascript",
@@ -83,6 +96,10 @@ export const projects = [
   {
     id: 6,
     name: "devpointlabs/vocab",
+    description: {
+      narritive: "DevPoint Labs is a full-stack bootcamp. A team of teaching assistants developed a system to help students keep track of hard to understand coding terms.",
+      languages: "Ruby on Rails backend with a React frontend"
+    },
     bulletPoints: [
       "A web application to help coding learners to review unfamiliar terms.",
       "Worked on building better UI/UX"

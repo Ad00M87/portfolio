@@ -61,11 +61,21 @@ class Projects extends React.Component {
         <Segment clearing basic textAlign="center">
           <Header as="h1">Projects</Header>
           <Button.Group floated="right">
-            <Button icon labelPosition="right" onClick={() => this.setState({ cardView: false })}>
+            <Button
+              icon
+              labelPosition="right"
+              onClick={() => this.setState({ cardView: false })}
+              color='teal'
+            >
               <Icon name="list layout"  size="big" />
               List View
             </Button>
-            <Button icon labelPosition="right" onClick={() => this.setState({ cardView: true })}>
+            <Button
+              icon
+              labelPosition="right"
+              onClick={() => this.setState({ cardView: true })}
+              color="teal"
+            >
               <Icon name="block layout" size="big" />
               Card View
             </Button>
@@ -74,7 +84,7 @@ class Projects extends React.Component {
         <Grid columns={2}>
           <Grid.Column width={3}>
             <Grid.Row>
-              <Button onClick={this.clearFilters}>Clear Filters</Button>
+              <Button color="teal" onClick={this.clearFilters}>Clear Filters</Button>
               <Segment>
                 <Header as="h2">Filter by Year</Header>
                 <div>

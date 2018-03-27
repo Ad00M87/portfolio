@@ -11,15 +11,12 @@ const ListProjects = ({ projects, changeview }) => (
           style={{marginTop: '10px', marginBottom: '10px', boxShadow: '4px 4px 4px 4px grey', marginLeft: '3px'}}
         >
           <Grid.Column width={6}>
-            <Header textAlign="center" as="h1">{p.name}</Header>
-            { p.bulletPoints.map( (b,i) => {
-              return(
-                <Header as="h3">
-                  {i+1}. {b}
-                </Header>
-              )
-            })}
-            <Button onClick={() => changeview(p.id)}>View Project</Button>
+            <div style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column'}}>
+              <Header textAlign="center" as="h1">{p.name}</Header>
+              <Header textAlign="center" as="h4">{p.description.narritive}</Header>
+              <Header textAlign="center" as="h4">Languages: {p.description.languages}</Header>
+              <Button color="teal" onClick={() => changeview(p.id)}>View Project Sample and Description</Button>
+            </div>
           </Grid.Column>
           <Grid.Column width={10}>
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1}}>

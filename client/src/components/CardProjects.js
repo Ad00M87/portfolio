@@ -18,16 +18,15 @@ const CardProjects = ({ projects, changeview }) => (
             <Card.Header style={{paddingTop: '15px'}}>
               {p.name}
             </Card.Header>
-            { p.bulletPoints.map( (b,i) => {
-              return(
-                <Card.Description style={{padding: 3}}>
-                  {i+1}. {b}
-                </Card.Description>
-              )
-            })}
+            <Card.Description style={{padding: 3}}>
+              {p.description.narritive}
+            </Card.Description>
+            <Card.Description style={{padding: 3}}>
+              Languages: {p.description.languages}
+            </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <Button onClick={() => changeview(p.id)}>View Project</Button>
+            <Button color="teal" onClick={() => changeview(p.id)}>View Project Sample and Description</Button>
           </Card.Content>
         </Card>
       )
