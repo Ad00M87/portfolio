@@ -18,7 +18,7 @@ class App extends Component {
         <Divider hidden style={{marginTop: '100px'}} />
         <Flash />
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Projects} />
           <Route exact path='/projects' component={Projects} />
           <Route exact path='/projects/:id' component={Project} />
           <Route exact path='/skills' component={Skills} />
