@@ -8,7 +8,7 @@ import VOCM from '../images/Vocab.mov';
 import WHNM from '../images/WhistleNative.mov';
 import WHWM from '../images/WhistleWeb.mov';
 import UNCST from '../images/Underconstruction.mov';
-import { Header, Grid, Segment, Divider } from 'semantic-ui-react';
+import { Header, Grid, Divider } from 'semantic-ui-react';
 
 const videos = [ CNDUM, WHNM, DPSM, JKDM, DFRM, VOCM, WHWM, UNCST ]
 

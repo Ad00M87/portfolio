@@ -23,7 +23,7 @@ class Contact extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, contact, comments, contactValue } = this.state;
+    // const { name, contact, comments, contactValue } = this.state;
   }
 
   handleChange = (e) => {

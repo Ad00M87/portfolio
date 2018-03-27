@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Flash from './Flash';
-import Home from './Home';
 import Projects from './Projects';
 import Project from './Project';
 import Skills from './Skills';
