@@ -12,6 +12,7 @@ import ListProjects from './ListProjects';
 import CardProjects from './CardProjects';
 import { projects } from './ProjectInfo';
 import { setCurrentProject } from '../actions/project';
+import { setFlash } from '../actions/flash';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -51,6 +52,7 @@ class Projects extends React.Component {
 
   clearFilters = () => {
     this.setState({ projects: projects, year: '', type: '' })
+    this.props.dispatch(setFlash("Filters Cleared", "blue"))
   }
 
   render() {
